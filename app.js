@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { Sequelize, DataTypes } = require("sequelize");
+const dotenv = require("dotenv");
+dotenv.config();
 
 const app = express();
 app.use(bodyParser.json());
