@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const pool = new Pool({
   connectionString:
-    "postgres://default:Qbf6zPSehr1O@ep-icy-haze-05113075-pooler.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb?sslmode=require",
+  process.env.POSTGRES_URL + "?sslmode=require",
 });
 
 pool.connect((err)=>{
