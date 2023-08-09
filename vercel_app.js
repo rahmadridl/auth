@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { Sequelize, DataTypes } = require("sequelize");
 const dotenv = require("dotenv");
 dotenv.config();
 const postgre = require("./database.js");
@@ -68,8 +67,6 @@ app.get("/api/me", async (req, res) => {
 });
 
 // Start the server
-sequelize.sync().then(() => {
-  app.listen(3000, () => {
-    console.log("Server is running on port 3000");
-  });
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
 });
