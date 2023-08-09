@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const { Sequelize, DataTypes } = require("sequelize");
 const dotenv = require("dotenv");
 dotenv.config();
-const postgre = require("../database.js");
+const postgre = require("database.js");
 
 const app = express();
 app.use(bodyParser.json());
